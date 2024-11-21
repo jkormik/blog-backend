@@ -26,14 +26,14 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
               <ul class="nav navbar-nav menu_nav justify-content-center">
-                <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact</a></li>
               </ul>
               <ul class="nav navbar-nav navbar-right navbar-social">
-                <li><a href="#"><i class="ti-facebook"></i></a></li>
-                <li><a href="#"><i class="ti-twitter-alt"></i></a></li>
-                <li><a href="#"><i class="ti-instagram"></i></a></li>
-                <li><a href="#"><i class="ti-skype"></i></a></li>
+                <li><a href="{% url 'index' %}"><i class="ti-facebook"></i></a></li>
+                <li><a href="{% url 'index' %}"><i class="ti-twitter-alt"></i></a></li>
+                <li><a href="{% url 'index' %}"><i class="ti-instagram"></i></a></li>
+                <li><a href="{% url 'index' %}"><i class="ti-skype"></i></a></li>
               </ul>
             </div> 
           </div>
@@ -50,7 +50,7 @@
             <h1>Blog details</h1>
             <nav aria-label="breadcrumb" class="banner-breadcrumb">
               <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Blog Details</li>
               </ol>
             </nav>
@@ -85,13 +85,13 @@
               </div>
               <p>{{ post.text }}</p>
               <div class="news_d_footer flex-column flex-sm-row">
-                <a href="#"><span class="align-middle mr-2"><i class="ti-heart" style="color:red;"></i></span>{{ post.likes_amount }}</a>
-                <a class="justify-content-sm-center ml-sm-auto mt-sm-0 mt-2" href="#"><span class="align-middle mr-2"><i class="ti-themify-favicon"></i></span>{{ post.comments|length }}</a>
+                <a href="{% url 'index' %}"><span class="align-middle mr-2"><i class="ti-heart" style="color:red;"></i></span>{{ post.likes_amount }}</a>
+                <a class="justify-content-sm-center ml-sm-auto mt-sm-0 mt-2" href="{% url 'index' %}"><span class="align-middle mr-2"><i class="ti-themify-favicon"></i></span>{{ post.comments|length }}</a>
                 <div class="news_socail ml-sm-auto mt-sm-0 mt-2">
-                  <a href="#"><i class="fab fa-facebook-f"></i></a>
-                  <a href="#"><i class="fab fa-twitter"></i></a>
-                  <a href="#"><i class="fab fa-dribbble"></i></a>
-                  <a href="#"><i class="fab fa-behance"></i></a>
+                  <a href="{% url 'index' %}"><i class="fab fa-facebook-f"></i></a>
+                  <a href="{% url 'index' %}"><i class="fab fa-twitter"></i></a>
+                  <a href="{% url 'index' %}"><i class="fab fa-dribbble"></i></a>
+                  <a href="{% url 'index' %}"><i class="fab fa-behance"></i></a>
                 </div>
               </div>
             </div>
@@ -104,7 +104,7 @@
                 <div class="single-comment justify-content-between d-flex">
                   <div class="user justify-content-between d-flex">
                     <div class="desc">
-                      <h5><a href="#">{{ comment.author }}</a></h5>
+                      <h5><a href="{% url 'index' %}">{{ comment.author }}</a></h5>
                       <p class="date">{{ comment.published_at }}</p>
                       <p class="comment">
                         {{ comment.text }}
@@ -112,7 +112,7 @@
                     </div>
                   </div>
                   <div class="reply-btn">
-                          <a href="" class="btn-reply text-uppercase">reply</a> 
+                          <a href="{% url 'index' %}" class="btn-reply text-uppercase">reply</a> 
                   </div>
                 </div>
               </div>   
@@ -193,16 +193,16 @@
               <h6>Follow Us</h6>
               <p>Let us be social</p>
               <div class="footer-social d-flex align-items-center">
-                <a href="#">
+                <a href="{% url 'index' %}">
                   <i class="fab fa-facebook-f"></i>
                 </a>
-                <a href="#">
+                <a href="{% url 'index' %}">
                   <i class="fab fa-twitter"></i>
                 </a>
-                <a href="#">
+                <a href="{% url 'index' %}">
                   <i class="fab fa-dribbble"></i>
                 </a>
-                <a href="#">
+                <a href="{% url 'index' %}">
                   <i class="fab fa-behance"></i>
                 </a>
               </div>
