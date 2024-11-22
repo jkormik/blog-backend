@@ -2,6 +2,7 @@
 {% extends 'base.html' %}
 {% load static %}
 <html lang="en">
+  {% block title %}{{ post.title }} - Blog Details{% endblock %}
   {% block content %}
   <body>
     <!--================ Hero sm Banner start =================-->      
@@ -109,6 +110,7 @@
     </section>
     <!--================ End Blog Post Area =================-->
 
-    {% endblock %}
+  
   </body>
+  {% endblock %}
 </html>
