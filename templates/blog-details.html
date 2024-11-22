@@ -2,18 +2,8 @@
 {% extends 'base.html' %}
 {% load static %}
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Remake Barber - Blog Details</title>
-    <link rel="icon" href="img/favicon.png" type="image/png">
-
-    <link rel="stylesheet" href="{% static "styles.min.css" %}">
-  </head>
+  {% block content %}
   <body>
-    {% block content %}
-    
     <!--================ Hero sm Banner start =================-->      
     <section class="mb-30px">
       <div class="container">
@@ -120,7 +110,5 @@
     <!--================ End Blog Post Area =================-->
 
     {% endblock %}
-
-    <script src="{% static "scripts.js" %}"></script>
   </body>
 </html>
